@@ -1,0 +1,56 @@
+tankel@tankel-VirtualBox:~$ man su
+tankel@tankel-VirtualBox:~$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-ABbEHknPS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-ABknS] [-r role] [-t type] [-C num] [-D directory] [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+tankel@tankel-VirtualBox:~$ pwd
+/home/tankel
+tankel@tankel-VirtualBox:~$ mkdir carpeta1 carpeta2
+tankel@tankel-VirtualBox:~$ cd carpeta1
+tankel@tankel-VirtualBox:~/carpeta1$ nano archivo1.dat
+tankel@tankel-VirtualBox:~/carpeta1$ cp archivo1.dat ../carpeta2/archivo1_copia1.dat
+tankel@tankel-VirtualBox:~/carpeta1$ cp archivo1.dat ~/carpeta2/archivo1_copia2.dat
+tankel@tankel-VirtualBox:~/carpeta1$ cd ..
+tankel@tankel-VirtualBox:~$ cd carpeta2
+tankel@tankel-VirtualBox:~/carpeta2$ ls .*
+.:
+archivo1_copia1.dat  archivo1_copia2.dat
+
+..:
+carpeta1  carpeta2  Desktop  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+tankel@tankel-VirtualBox:~/carpeta2$ sl
+Command 'sl' not found, but can be installed with:
+sudo apt install sl
+tankel@tankel-VirtualBox:~/carpeta2$ cat archivo1_copia1.dat
+Hola clase
+
+tankel@tankel-VirtualBox:~/carpeta2$ cat archivo1_copia2.dat
+Hola clase
+
+tankel@tankel-VirtualBox:~/carpeta2$ mv ../
+.bash_logout  carpeta1/     Desktop/      .gnupg/       Music/        Public/       Templates/    
+.bashrc       carpeta2/     Documents/    .lesshst      Pictures/     snap/         Videos/       
+.cache/       .config/      Downloads/    .local/       .profile      .ssh/         
+tankel@tankel-VirtualBox:~/carpeta2$ mv ../carpeta1/archivo1.dat mover/archivo1_movido.dat
+mv: cannot move '../carpeta1/archivo1.dat' to 'mover/archivo1_movido.dat': No such file or directory
+tankel@tankel-VirtualBox:~/carpeta2$ mkdir mover
+tankel@tankel-VirtualBox:~/carpeta2$ mv ../carpeta1/archivo1.dat mover/archivo1_movido.dat
+tankel@tankel-VirtualBox:~/carpeta2$ cp archivo1_copia.dat archivo1_copia.dat.backup
+cp: cannot stat 'archivo1_copia.dat': No such file or directory
+tankel@tankel-VirtualBox:~/carpeta2$ cp archivo1_copia1.dat archivo1_copia.dat.backup
+tankel@tankel-VirtualBox:~/carpeta2$ rm *.dat
+tankel@tankel-VirtualBox:~/carpeta2$ ls
+archivo1_copia.dat.backup  mover
+tankel@tankel-VirtualBox:~/carpeta2$ rmdir mover
+rmdir: failed to remove 'mover': Directory not empty
+tankel@tankel-VirtualBox:~/carpeta2$ rmdir -r mover
+rmdir: invalid option -- 'r'
+Try 'rmdir --help' for more information.
+tankel@tankel-VirtualBox:~/carpeta2$ rm -r mover
+tankel@tankel-VirtualBox:~/carpeta2$ ls
+archivo1_copia.dat.backup
+tankel@tankel-VirtualBox:~/carpeta2$

@@ -1,0 +1,1 @@
+ [[False] * self.cols for _ in range(self.rows)]

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "xutility": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "vector": "cpp",
+        "numeric": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xstring": "cpp"
+    }
+}

@@ -1,0 +1,1 @@
+{'won_match': 0, 'drew_match': 0, 'lost_match': 1, 'won_games': 12, 'drew_games': 5, 'lost_games': 13, 'raised_errors': 0, 'invalid_moves': 0, 'early_movements': 0, 'max_captures_exceeded': 0, 'best_against': 'Nacho el Demolidor', 'best_won_games': 12, 'worst_against': 'Nacho el Demolidor', 'worst_won_games': 12}
